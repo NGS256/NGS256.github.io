@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naditha Gathsara Sakalasuriya — e-Portfolio</title>
+<meta name="description" content="e-Portfolio of Naditha Gathsara Sakalasuriya, Biotechnology undergraduate at SLIIT.">
+<style>
+:root{
+  --primary:#0d9488; --primary-dark:#0f766e; --primary-light:#5eead4;
+  --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#64748b; --border:#e2e8f0;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;}
+nav .brand{font-weight:700;font-size:1.15rem;color:var(--primary-dark);text-decoration:none;}
+nav ul{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap;}
+nav a{text-decoration:none;color:var(--text);font-weight:500;font-size:.95rem;transition:color .2s;}
+nav a:hover{color:var(--primary);}
+section{max-width:960px;margin:0 auto;padding:4rem 1.5rem;}
+section h2{font-size:1.9rem;color:var(--primary-dark);margin-bottom:2rem;position:relative;padding-bottom:.5rem;}
+section h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;background:var(--primary);border-radius:2px;}
+.hero{text-align:center;padding-top:5rem;}
+.hero .photo{width:200px;height:200px;border-radius:50%;overflow:hidden;border:5px solid var(--primary-light);background:linear-gradient(135deg,var(--primary),var(--primary-dark));display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;}
+.hero .photo img{width:100%;height:100%;object-fit:cover;}
+.hero .photo .initials{font-size:3.5rem;font-weight:700;color:#fff;letter-spacing:.1em;}
+.hero h1{font-size:2.6rem;color:var(--text);margin-bottom:.3rem;}
+.hero .tagline{font-size:1.15rem;color:var(--primary);font-weight:600;margin-bottom:1rem;}
+.hero .intro{color:var(--muted);max-width:600px;margin:0 auto;font-size:1.05rem;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.04);}
+.timeline{position:relative;padding-left:1.5rem;}
+.timeline::before{content:'';position:absolute;left:0;top:.5rem;bottom:.5rem;width:2px;background:var(--border);}
+.timeline-item{position:relative;padding-bottom:1.8rem;}
+.timeline-item:last-child{padding-bottom:0;}
+.timeline-item::before{content:'';position:absolute;left:-1.65rem;top:.4rem;width:12px;height:12px;border-radius:50%;background:var(--primary);border:2px solid #fff;}
+.timeline-item h3{font-size:1.15rem;color:var(--text);}
+.timeline-item .inst{color:var(--primary);font-weight:600;font-size:.95rem;margin:.2rem 0;}
+.timeline-item .yr{color:var(--muted);font-size:.85rem;}
+.timeline-item p,.timeline-item ul{color:var(--muted);font-size:.95rem;margin-top:.4rem;}
+.timeline-item ul{padding-left:1.2rem;}
+.badge{display:inline-block;background:#f0fdfa;color:var(--primary-dark);padding:.4rem .9rem;border-radius:20px;font-size:.85rem;font-weight:500;margin:.25rem;border:1px solid #ccfbf1;}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+.skill-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.3rem;}
+.skill-card h3{color:var(--primary-dark);font-size:1rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem;}
+.skill-card ul{list-style:none;}
+.skill-card li{color:var(--muted);font-size:.9rem;padding:.2rem 0;}
+.skill-card li::before{content:'▸ ';color:var(--primary);}
+.hobbies{display:flex;flex-wrap:wrap;gap:1rem;}
+.hobby{flex:1;min-width:180px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.3rem;text-align:center;}
+.hobby .icon{font-size:2rem;margin-bottom:.5rem;}
+.hobby h3{color:var(--primary-dark);font-size:1rem;margin-bottom:.3rem;}
+.hobby p{color:var(--muted);font-size:.85rem;}
+.resume-btn{display:inline-block;background:var(--primary);color:#fff;text-decoration:none;padding:.8rem 2rem;border-radius:8px;font-weight:600;transition:background .2s;}
+.resume-btn:hover{background:var(--primary-dark);}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+.contact-item{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.3rem;display:flex;align-items:center;gap:.8rem;}
+.contact-item .ico{font-size:1.3rem;}
+.contact-item a{color:var(--primary-dark);text-decoration:none;font-weight:500;}
+.contact-item a:hover{text-decoration:underline;}
+footer{background:var(--text);color:#cbd5e1;text-align:center;padding:2rem 1rem;}
+footer a{color:var(--primary-light);text-decoration:none;}
+@media(max-width:600px){
+  .hero h1{font-size:2rem;}
+  nav ul{gap:1rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="#top">Naditha Gathsara</a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#hobbies">Hobbies</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div id="top"></div>
+
+<section class="hero">
+  <div class="photo">
+    <img src="profile.jpg" alt="Naditha Gathsara Sakalasuriya" onerror="this.style.display='none';this.parentElement.querySelector('.initials').style.display='block';">
+    <span class="initials" style="display:none;">NGS</span>
+  </div>
+  <h1>H.M.N.G. Sakalasuriya</h1>
+  <p class="tagline">Biotechnology Undergraduate · SLIIT</p>
+  <p class="intro">A highly motivated and passionate Biotechnology undergraduate seeking opportunities to apply scientific knowledge and analytical skills in a research-oriented environment, committed to contributing to impactful discoveries in the life sciences.</p>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>I am <strong>Naditha Gathsara Sakalasuriya</strong>, an undergraduate reading for a Bachelor of Science Honors in Biotechnology at the Sri Lanka Institute of Information Technology (SLIIT). I am passionate about the life sciences and dedicated to developing my expertise toward a fulfilling career as a Research Scientist.</p>
+    <p style="margin-top:1rem;">I enjoy applying my scientific knowledge and analytical skills in practical, research-oriented settings. I am an active member of the SLIIT Biotechnology student community and have participated in various volunteer and networking events organized by the community. In my free time, I love reading, researching topics that interest me, and watching films.</p>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Educational Qualifications</h2>
+  <div class="card">
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Bachelor of Science Honors in Biotechnology</h3>
+        <p class="inst">Sri Lanka Institute of Information Technology (SLIIT)</p>
+        <p>Received the <strong>Dean's List award</strong> for maintaining a high grade point average and academic excellence.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>G.C.E. Advanced Level (A/L)</h3>
+        <p class="inst">Isipathana College, Colombo</p>
+        <ul>
+          <li>Chemistry — S</li>
+          <li>Physics — S</li>
+          <li>Biology — S</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <h3>G.C.E. Ordinary Level (O/L)</h3>
+        <p class="inst">Isipathana College, Colombo</p>
+        <ul>
+          <li>Buddhism — A</li>
+          <li>Sinhala Language &amp; Literature — B</li>
+          <li>English Language — B</li>
+          <li>Mathematics — B</li>
+          <li>History — C</li>
+          <li>Science — A</li>
+          <li>Music (Oriental) — A</li>
+          <li>Business &amp; Accounting Studies — B</li>
+          <li>Health &amp; Physical Education — A</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>🧪 Laboratory Skills</h3>
+      <ul>
+        <li>Basic Lab Techniques (pipetting, microscopy, centrifugation)</li>
+        <li>Aseptic / Sterile Technique</li>
+        <li>Sample Preparation &amp; Analysis</li>
+        <li>Basic knowledge of PCR and Gel Electrophoresis</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>🧠 Soft Skills</h3>
+      <ul>
+        <li>Analytical Thinking</li>
+        <li>Problem Solving</li>
+        <li>Teamwork &amp; Collaboration</li>
+        <li>Excellent Communication Skills</li>
+      </ul>
+    </div>
+  </div>
+  <div style="margin-top:1.5rem;">
+    <span class="badge">Pipetting</span>
+    <span class="badge">Microscopy</span>
+    <span class="badge">Centrifugation</span>
+    <span class="badge">Aseptic Technique</span>
+    <span class="badge">PCR</span>
+    <span class="badge">Gel Electrophoresis</span>
+    <span class="badge">Sample Preparation</span>
+    <span class="badge">Analytical Thinking</span>
+    <span class="badge">Problem Solving</span>
+    <span class="badge">Teamwork</span>
+    <span class="badge">Communication</span>
+  </div>
+</section>
+
+<section id="activities">
+  <h2>Activities</h2>
+  <div class="card">
+    <p>Active member of the SLIIT Biotechnology student community, having participated in various volunteer and networking events organized by the community.</p>
+  </div>
+</section>
+
+<section id="hobbies">
+  <h2>Hobbies</h2>
+  <div class="hobbies">
+    <div class="hobby">
+      <div class="icon">📚</div>
+      <h3>Reading</h3>
+      <p>Exploring books across science and beyond.</p>
+    </div>
+    <div class="hobby">
+      <div class="icon">🔬</div>
+      <h3>Researching</h3>
+      <p>Diving deep into topics that interest me.</p>
+    </div>
+    <div class="hobby">
+      <div class="icon">🎬</div>
+      <h3>Watching Films</h3>
+      <p>Enjoying cinema in my free time.</p>
+    </div>
+  </div>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <div class="card" style="text-align:center;">
+    <p style="color:var(--muted);margin-bottom:1.2rem;">Download my complete resume (PDF version) submitted for Practical 1.</p>
+    <a href="resume.pdf" download class="resume-btn">⬇ Download Resume (PDF)</a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Details</h2>
+  <div class="contact-grid">
+    <div class="contact-item">
+      <span class="ico">✉️</span>
+      <div><strong>Email</strong><br><a href="mailto:Nadithagathsara220@gmail.com">Nadithagathsara220@gmail.com</a></div>
+    </div>
+    <div class="contact-item">
+      <span class="ico">📱</span>
+      <div><strong>Phone</strong><br><a href="tel:+94770653092">0770653092</a></div>
+    </div>
+    <div class="contact-item">
+      <span class="ico">📍</span>
+      <div><strong>Address</strong><br>65/4 Jayagath Road, Nawinna, Maharagama</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 H.M.N.G. Sakalasuriya · e-Portfolio built with GitHub Pages</p>
+  <p style="margin-top:.3rem;font-size:.85rem;">SC1172 — Introduction to Information Technology</p>
+</footer>
+
+</body>
+</html>
